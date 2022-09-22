@@ -74,7 +74,7 @@ export default function Labs(props) {
           </p>
           <div className={styles.coupons}>
             {coupons.map((coupon, i) => (
-              <div style={{ display: 'flex', flexDirection: 'column', margin: '0.5rem 0', width: '100%' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', margin: '0.5rem 0', width: '100%' }} key={i}>
                 <div style={{ alignItems: 'center', display: 'flex', width: '100%' }}>
                   <TextInput value={coupon} onChange={(e) => handleChange(e, i)} compact style={{ width: '100%' }} placeholder='Coupon Link' />
                   { coupons.length > 1 ? <Button onClick={() => removeCoupon(i)} variant="subtle" style={{ marginLeft: '0.5rem' }} color="gray" compact><Trash size={20} /></Button> : null }

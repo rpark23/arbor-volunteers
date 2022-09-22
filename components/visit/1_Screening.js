@@ -83,7 +83,7 @@ export default function Screening(props) {
     <div className={styles.screening}>
       <h2 className={styles.sectionHeader}>Screening</h2>
       <form onSubmit={handleSubmit}>
-        <h3>Patient's preferred language:</h3>
+        <h3>Patient&apos;s preferred language:</h3>
         <Radio.Group
           className={styles.group}
           value={language}

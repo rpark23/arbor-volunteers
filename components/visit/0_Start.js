@@ -43,7 +43,7 @@ export default function Start(props) {
         <div className={styles.step}>
           <div>
             <h3 style={{ backgroundColor: '#3a6bb8' }}>2</h3>
-            <p>Create your patient's Box folder:</p>
+            <p>Create your patient&apos;s Box folder:</p>
           </div>
           <Button onClick={openBox} className={styles.secondaryButton} uppercase> Open Box</Button>
         </div>
