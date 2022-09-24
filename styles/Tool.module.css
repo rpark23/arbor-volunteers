@@ -14,8 +14,10 @@
   border-radius: 2vh;
   display: flex;
   flex-direction: column;
-  margin-top: 3vh;
-  min-height: 90vh;
+  /* margin-top: 3vh;
+  min-height: 90vh; */
+  margin-top: 4vh;
+  min-height: 92vh;
   width: 30rem;
 }
 

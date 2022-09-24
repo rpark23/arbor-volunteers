@@ -35,23 +35,29 @@ export default function Start(props) {
         <div className={styles.step}>
           <div>
             <h3 style={{ backgroundColor: '#B83A4B' }}>1</h3>
-            <p>Ready to start your patient visit?</p>
+            <p>Cardinal Key Instructions:</p>
           </div>
-          <Button className={styles.primaryButton} onClick={handleOpen} uppercase>Patient Tracker</Button>
+          <Link href="https://uit.stanford.edu/service/cardinalkey/installation" passHref>
+            <Button component="a" target="_blank" rel="noreferrer" className={styles.primaryButton} rightIcon={<ExternalLink />} uppercase>Installation Guide</Button>
+          </Link>
+          {/* <Button className={styles.primaryButton} onClick={handleOpen} uppercase>Patient Tracker</Button> */}
         </div>
         <ArrowDown className={styles.arrowDown}/>
         <div className={styles.step}>
           <div>
             <h3 style={{ backgroundColor: '#3a6bb8' }}>2</h3>
-            <p>Create your patient&apos;s Box folder:</p>
+            <p>Start tracking your patient visit:</p>
           </div>
-          <Button onClick={openBox} className={styles.secondaryButton} uppercase> Open Box</Button>
+          <Link href="https://docs.google.com/spreadsheets/d/13KYLABkYfAChfU-MCyZqoLm50KlyHWVca4PYZa36_AA/edit" passHref>
+            <Button component="a" target="_blank" rel="noreferrer" className={styles.secondaryButton} rightIcon={<ExternalLink />} uppercase>Patient Tracker</Button>
+          </Link>
+          {/* <Button onClick={openBox} className={styles.secondaryButton} uppercase> Open Box</Button> */}
         </div>
         <ArrowDown className={styles.arrowDown}/>
         <div className={styles.step}>
           <div>
             <h3 style={{ backgroundColor: '#7a6ed1' }}>3</h3>
-            <p>Ready for vitals?</p>
+            <p>Log vitals in EMR:</p>
           </div>
           <Link href="https://citrix.stanfordhealthcare.org" passHref>
             <Button component="a" target="_blank" rel="noreferrer" className={styles.tertiaryButton} rightIcon={<ExternalLink />} uppercase> Go to EMR</Button>

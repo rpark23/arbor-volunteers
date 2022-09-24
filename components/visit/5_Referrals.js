@@ -160,6 +160,7 @@ export default function Referrals(props) {
     }
     setScreens(newScreens);
     emrNote();
+    console.log(newScreens);
     return newScreens;
   }
 
@@ -178,6 +179,7 @@ export default function Referrals(props) {
   }
 
   const nextScreen =  () => {
+    console.log(screens);
     let currScreens = screens;
     if (!currScreens) {
       currScreens = getScreens();

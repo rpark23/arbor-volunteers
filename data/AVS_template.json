@@ -3,7 +3,7 @@
     "title": "<h2>Primary Care Referral</h2>",
     "description": "<p>Our resources at Arbor Free Clinic are limited and our clinic is designed to only see patients a few times before referring them to a long-term care option. We also cannot provide patients with good continuity of care since patients will typically see a different doctor on each visit. A single primary care physician at another clinic can much more effectively manage your health over time.</p>",
     "Ravenswood": {
-      "description": "<p>Therefore, we are referring you to <strong><u>Ravenswood Family Health Center</u></strong>. Ravenswood also offers dental care, optometry, insurance counseling, and other services. For uninsured patients, they operate on a sliding scale.</p><br><h3>Next Steps</h3><ul><li>Be on the lookout for a call from Ravenswood, but if you don’t receive it within a week, call (650) 330-7416.</li><li>We will follow up with you in 2 weeks to see if you have made contact with Ravenswood.</li></ul>",
+      "description": "<p>Therefore, we are referring you to <strong><u>Ravenswood (Mayview) Family Health Center</u></strong>. Ravenswood also offers dental care, optometry, insurance counseling, and other services. For uninsured patients, they operate on a sliding scale.</p><br><h3>Next Steps</h3><ul><li>Be on the lookout for a call from Ravenswood, but if you don’t receive it within a week, call (650) 330-7416.</li><li>We will follow up with you in 2 weeks to see if you have made contact with Ravenswood.</li></ul>",
       "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203038.43452159798!2d-122.14419364956335!3d37.3312490400011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb64bc9cafd1f%3A0x5ed9b0fb90f442fc!2sMayview%20Community%20Health%20Center!5e0!3m2!1sen!2sus!4v1660252946209!5m2!1sen!2sus"
     }, 
     "NEMS": {
@@ -34,7 +34,7 @@
     "instructions": {
       "fasting": "<li>Please remember to fast for 10 hours prior to visiting the lab. It is ok to drink water.</li>",
       "noFasting": "<li>You do not need to fast.</li>",
-      "all": "<li>You may go to the lab at any time and do not need an appointment.</li><li>Please bring any form of photo identification.</li><li>This is a <strong>no cost</strong> service. <strong>If any billing issues come up, please call or email us</strong>.</li><li>If the clinical labs cannot find your orders, let them know they were sent via fax. Please call us immediately at the phone number below and leave a message if any issues arise.</li>"
+      "all": "<li>You may go to the lab at any time and <strong>do not need an appointment,</strong> but we <u>recommend that you call the lab ahead of your visit</u> to make sure they have received your lab orders.</li><li>If the clinical labs cannot find your orders, let them know they were sent via fax. Please call us immediately at the phone number below and leave a message if any issues arise.</li><li>Please bring any form of <strong><u>photo identification</u></strong>.</li><li>This is a <strong>no cost</strong> service. <strong>If any billing issues come up, please call or email us</strong>.</li>"
     }
   }, 
   {
@@ -45,9 +45,9 @@
       "radiology": "<h3>Stanford Hospital – Radiology Registration</h3><ul><li><strong>Address</strong>: 300 Pasteur Drive, Pavilion E, Level 1, E12, Stanford, CA 94305</li><li><strong>Hours</strong>: Mon-Fri 6:45AM-5:00PM</li><li><strong>Directions</strong>: Please enter through the main hospital entrance near the fountain. Immediately after entering, take a left and proceed past the cafeteria. Turn to the left when you see the “Radiology Registration” sign (E12).</li>"
     },
     "instructions": {
-      "xray": "<li>For your <strong>X-ray</strong>, You may go to the imaging clinic at any time and do not need an appointment.</li><li><strong>IMPORTANT</strong>: Please bring a printed copy of the imaging order you received from Arbor Free Clinic to your appointment.</li>",
-      "other": "<li>For your <strong>CT/MRI/ultrasound</strong>, you will need to make an appointment at the imaging clinic. Please wait for Stanford Hospital to call you to make an appointment. If you have not received a call within a week, please call Stanford Radiology Scheduling at (650) 723-6855.</li>",
-      "all": "<li>Please bring any form of photo identification.</li><li>This is a no cost service. If any billing issues come up, please call or email us.</li><li>If any issues arise, please call us immediately at the phone number below and leave a message.</li>"
+      "xray": "<li>For your <strong>X-ray</strong>, You may go to the imaging clinic at any time and <strong>do not need an appointment</strong>.</li><li><strong>IMPORTANT</strong>: Please bring a printed copy of the imaging order you received from Arbor Free Clinic to your appointment.</li>",
+      "other": "<li>For your <strong>CT/MRI/ultrasound</strong>, you will need to <strong>make an appointment</strong> at the imaging clinic. Please wait for Stanford Hospital to call you to make an appointment. If you have not received a call within a week, please call Stanford Radiology Scheduling at (650) 723-6855.</li>",
+      "all": "<li><strong>Please bring any form of <u>photo identification</u></strong>.</li><li>This is a no cost service. <strong>If any <u>billing issues</u> come up, please call or email us</strong>.</li><li>If any issues arise, please call us immediately at the phone number below and leave a message.</li>"
     }
   },
   {

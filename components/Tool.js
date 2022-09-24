@@ -30,6 +30,15 @@ export default function Welcome() {
   const [utilities, setUtilities] = useState(false);
   const [tech, setTech] = useState(false);
 
+  const [cardiovascular, setCardiovascular] = useState(false);
+  const [diabetes, setDiabetes] = useState(false);
+  const [cholesterol, setCholesterol] = useState(false);
+  const [hypertension, setHypertension] = useState(false);
+  const [stroke, setStroke] = useState(false);
+  const [other, setOther] = useState(false);
+  const [eating, setEating] = useState(false);
+  const [exercise, setExercise] = useState(false);
+
   const [primaryCare, setPrimaryCare] = useState(true);
   const [labs, setLabs] = useState(false);
   const [fasting, setFasting] = useState(false);
@@ -42,6 +51,8 @@ export default function Welcome() {
 
   const [open, setOpen] = useState(false);
 
+  const [screens, setScreens] = useState(null);
+
   const handleOpen = (e) => {
     setOpen(true);
   };
@@ -49,6 +60,8 @@ export default function Welcome() {
   const handleClose = () => {
     setOpen(false);
   };
+
+
 
   const screeningProps = {
     handleOpen, setView, language, setLanguage, zipCode, setZipCode, county, setCounty, pcp, setPCP, insurance, 
@@ -65,6 +78,11 @@ export default function Welcome() {
     xray, setXray, ct, setCT, mri, setMRI, us, setUS, medications, setMedications
   }
 
+  const healthEdProps = {
+    handleOpen, setView, cardiovascular, setCardiovascular, diabetes, setDiabetes, cholesterol, setCholesterol, hypertension, setHypertension,
+    stroke, setStroke, other, setOther, eating, setEating, exercise, setExercise
+  }
+
   const referralsProps = {
     handleOpen, view, setView, language, setLanguage, zipCode, setZipCode, county, setCounty, pcp, setPCP, insurance, setInsurance,
     primaryCare, setPrimaryCare, labs, setLabs, fasting, setFasting, imaging, setImaging, xray, setXray, ct, setCT, mri, 
@@ -79,11 +97,11 @@ export default function Welcome() {
           { view == 1 ? <Screening allProps={screeningProps} /> : null }
           { view == 2 ? <SocialNeeds allProps={socialNeedsProps} /> : null }
           { view == 3 ? <SelectReferrals allProps={selectReferralsProps} /> : null }
-          { view == 4 ? <HealthEd handleOpen={handleOpen} setView={setView} /> : null }
+          { view == 4 ? <HealthEd allProps={healthEdProps} /> : null }
         </div> : null
       }
       {view >= 5 ? <Referrals allProps={referralsProps} /> : null}
-       <Modal
+       {/* <Modal
         opened={open}
         centered
         onClose={handleClose}
@@ -94,7 +112,7 @@ export default function Welcome() {
           <iframe width="402" height="400" frameBorder="0" src="https://docs.google.com/spreadsheets/d/13KYLABkYfAChfU-MCyZqoLm50KlyHWVca4PYZa36_AA/edit"></iframe>
         </div>
       </Modal>
-      <Button onClick={handleOpen} className={styles.trackerButton} uppercase><ChevronUp />Open Patient Tracker</Button>
+      <Button onClick={handleOpen} className={styles.trackerButton} uppercase><ChevronUp />Open Patient Tracker</Button> */}
     </div>
   )
 }

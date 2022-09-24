@@ -4,17 +4,6 @@ import styles from '../../styles/Tool.module.css';
 import { Button, Checkbox, TextInput, Tooltip } from '@mantine/core';
 import { ArrowLeft, ArrowRight } from 'tabler-icons-react';
 
-// import FormGroup from '@mui/material/FormGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-// import Checkbox from '@mui/material/Checkbox';
-// import Radio from '@mui/material/Radio';
-// import RadioGroup from '@mui/material/RadioGroup';
-// import TextField from '@mui/material/TextField';
-// import Button from '@mui/material/Button';
-// import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-// import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-// import Tooltip from '@mui/material/Tooltip';
-
 export default function SelectReferrals(props) {
   const { handleOpen, setView, primaryCare, setPrimaryCare, labs, setLabs, fasting, setFasting, imaging, setImaging, 
     xray, setXray, ct, setCT, mri, setMRI, us, setUS, medications, setMedications } = props.allProps;
