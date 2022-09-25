@@ -5,7 +5,8 @@ import { Button } from '@mantine/core';
 import { ArrowLeft, ArrowRight } from 'tabler-icons-react';
 
 export default function PCP(props) {
-  const { map, description, prevScreen, nextScreen } = props.allProps;
+  const { prevScreen, nextScreen } = props;
+  const { map, description } = props.allProps;
 
   useEffect(() => {
     document.getElementById('referral-site').innerHTML = description;

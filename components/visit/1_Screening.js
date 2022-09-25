@@ -72,7 +72,7 @@ export default function Screening(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setView(2);
+    setView(3);
   }
 
   const RadioStyle = { 
@@ -159,13 +159,13 @@ export default function Screening(props) {
             <Tooltip label={error} position="bottom" withArrow>
               <span>
                 <Button className={styles.next} type="submit" disabled uppercase>
-                  Social Needs
+                  Select Referrals
                   <ArrowRight className={styles.right}/>
                 </Button>
               </span>
             </Tooltip>  :
             <Button className={styles.next} type="submit" uppercase>
-              Social Needs
+              Select Referrals
               <ArrowRight className={styles.right}/>
             </Button>
           }

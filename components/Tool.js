@@ -1,4 +1,4 @@
-import { useState, forwardRef } from 'react';
+import { useState, forwardRef, useEffect } from 'react';
 import styles from '../styles/Tool.module.css';
 
 import Start from "./visit/0_Start";
@@ -7,6 +7,8 @@ import SocialNeeds from './visit/2_SocialNeeds';
 import SelectReferrals from './visit/3_SelectReferrals';
 import HealthEd from './visit/4_HealthEd';
 import Referrals from './visit/5_Referrals';
+
+import template from "../data/AVS_template.json";
 
 import { Button, Modal } from '@mantine/core';
 import { ChevronUp } from 'tabler-icons-react'
@@ -49,9 +51,23 @@ export default function Welcome() {
   const [us, setUS] = useState(null);
   const [medications, setMedications] = useState(false);
 
-  const [open, setOpen] = useState(false);
+  const [avs, setAVS] = useState(new Array(5));
 
-  const [screens, setScreens] = useState(null);
+  const [pcpSite, setPcpSite] = useState('');
+  const [pcpForm, setPCPForm] = useState('');
+  const [imagingTypes, setImagingTypes] = useState([]);
+  const [note, setNote] = useState('');
+
+  const [ coupons, setCoupons ] = useState(['']);
+  const [ meds, setMeds ] = useState(['']);
+  const [ pharmacyImgs, setPharmacyImgs ] = useState(['']);
+
+  const [ pcpProps, setPcpProps ] = useState(null);
+  const [ labsProps, setLabsProps ] = useState(null);
+  const [ imagingProps, setImagingProps ] = useState(null);
+  const [ medicationProps, setMedicationProps ] = useState(null);
+
+  const [open, setOpen] = useState(false);
 
   const handleOpen = (e) => {
     setOpen(true);
@@ -60,6 +76,140 @@ export default function Welcome() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const getPCP = () => {
+    let description = template[0].description + '<br>';
+    let map;
+    if (county=="Santa Clara County, CA" && language=="English") {
+      description += template[0].Ravenswood.description;
+      map = template[0].Ravenswood.map;
+      setPcpSite("Ravenswood");
+      setPCPForm('/forms/Arbor_Ravenswood_Cover_Sheet.pdf');
+    }
+    if (county=="Santa Clara County, CA" && language=="Mandarin") {
+      description += template[0].NEMS.description;
+      map = template[0].NEMS.map;
+      setPcpSite("NEMS");
+    }
+    if (county=="Santa Clara County, CA" && language=="Spanish") {
+      description += template[0].Gardner.description;
+      map = template[0].Gardner.map;
+      setPcpSite("Gardner");
+    }
+    if (county=="San Mateo County, CA") {
+      description += template[0].SamaritanHouse.description;
+      map = template[0].SamaritanHouse.map;
+      setPcpSite("Samaritan House");
+    }
+    if (county=="Alameda County, CA") {
+      description += template[0].AHS.description;
+      map = template[0].AHS.map;
+      setPcpSite("Alameda Health Systems");
+    }
+    const newAVS = avs;
+    newAVS[1] = '<br>' + template[0].title + description;
+    setPcpProps({ map, description });
+    setAVS(newAVS);
+  };
+
+  const getLabs = () => {
+    let description = template[1].description + '<br>' + '<h3>Instructions:</h3>' + '<ul>';
+    if (fasting) {
+      description += template[1].instructions.fasting + template[1].instructions.all + '</ul>'
+    } else {
+      description += template[1].instructions.noFasting + template[1].instructions.all + '</ul>'
+    }
+    description += "<br><img src='/images/labs.png' /><br><br>" + template[1].location.boswell.description;
+    const newAVS = avs;
+    newAVS[2] = '<br>' + template[1].title + description;
+    //setLabsProps({ description, prevScreen, nextScreen });
+    setAVS(newAVS);
+  };
+
+  const getImaging = () => {
+    let description = template[2].type;
+    let imagingTypes = [];
+    if (xray) {
+      imagingTypes.push('X-ray');
+    } 
+    if (ct) {
+      imagingTypes.push('CT');
+    }
+    if (mri) {
+      imagingTypes.push('MRI');
+    }
+    if (us) {
+      imagingTypes.push('ultrasound');
+    }
+    description += imagingTypes.join(', ') + '</li></ul><br><h3>Imaging Instructions:</h3><ul>'
+    if (xray) {
+      description += template[2].instructions.xray
+    }
+    if (ct | mri | us) {
+      description += template[2].instructions.other
+    }
+    description += template[2].instructions.all + "</ul>";
+    description += "<br><img src='/images/imaging.png' /><br><br>" + template[2].location.radiology;
+    const newAVS = avs;
+    newAVS[3] = '<br>' + template[2].title + description;
+    //setImagingProps({ description, prevScreen, nextScreen });
+    setAVS(newAVS);
+  };
+
+  const getMedications = () => {
+    const description = template[3].description;
+    for (let i=0; i<meds.length; i++) {
+      description += `<ul><li><strong>${meds[i]}</strong><ul><li><a href=${coupons[i]}>GoodRx Coupon link</a></li><li>Pharmacy Location: 
+      <span style="color: rgb(230, 0, 0);"><strong><u>PLEASE SPECIFY</u></strong></span></li></ul></li></ul>`;
+    }
+    const newAVS = avs;
+    newAVS[3] = '<br>' + template[3].title + description;
+    //setMedicationProps({ description, prevScreen, nextScreen });
+    setAVS(newAVS);
+  }
+
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[0] = '<h1>After Visit Summary of Referrals</h1>'
+    setAVS(newAVS);
+  }, []);
+
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[1] = null;
+    setAVS(newAVS);
+    setPCPForm('');
+    if (pcp) {
+      getPCP();
+    }
+  }, [county, pcp]);
+
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[2] = null;
+    setAVS(newAVS);
+    if (labs) {
+      getLabs();
+    }
+  }, [labs, fasting]);
+
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[3] = null;
+    setAVS(newAVS);
+    if (imaging) {
+      getImaging();
+    }
+  }, [imaging, xray, ct, mri, us]);
+
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[4] = null;
+    setAVS(newAVS);
+    if (medications) {
+      getMedications();
+    }
+  }, [medications, meds]);
 
 
 
@@ -86,7 +236,8 @@ export default function Welcome() {
   const referralsProps = {
     handleOpen, view, setView, language, setLanguage, zipCode, setZipCode, county, setCounty, pcp, setPCP, insurance, setInsurance,
     primaryCare, setPrimaryCare, labs, setLabs, fasting, setFasting, imaging, setImaging, xray, setXray, ct, setCT, mri, 
-    setMRI, us, setUS, medications, setMedications
+    setMRI, us, setUS, medications, setMedications, avs, pcpProps, pcpSite, coupons, setCoupons, meds, setMeds, 
+    pharmacyImgs, setPharmacyImgs
   }
 
   return (
@@ -95,9 +246,9 @@ export default function Welcome() {
         <div className={styles.visitView}>
           { view == 0 ? <Start handleOpen={handleOpen} setView={setView} /> : null }
           { view == 1 ? <Screening allProps={screeningProps} /> : null }
-          { view == 2 ? <SocialNeeds allProps={socialNeedsProps} /> : null }
+          {/* { view == 2 ? <SocialNeeds allProps={socialNeedsProps} /> : null } */}
           { view == 3 ? <SelectReferrals allProps={selectReferralsProps} /> : null }
-          { view == 4 ? <HealthEd allProps={healthEdProps} /> : null }
+          {/* { view == 4 ? <HealthEd allProps={healthEdProps} /> : null } */}
         </div> : null
       }
       {view >= 5 ? <Referrals allProps={referralsProps} /> : null}

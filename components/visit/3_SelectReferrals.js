@@ -12,7 +12,7 @@ export default function SelectReferrals(props) {
 
   const prevView = (e) => {
     e.preventDefault();
-    setView(2);
+    setView(1);
   }
 
   const handleChange = (e, func) => {
@@ -29,7 +29,7 @@ export default function SelectReferrals(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setView(4);
+    setView(5);
   }
 
   const CheckboxStyle = { 
@@ -76,13 +76,13 @@ export default function SelectReferrals(props) {
             <Tooltip label={error} position="bottom" withArrow>
               <span>
                 <Button className={styles.next} type="submit" disabled uppercase>
-                  Health Ed
+                  Review Referrals
                   <ArrowRight className={styles.right}/>
                 </Button>
               </span>
             </Tooltip>  :
             <Button className={styles.next} type="submit" uppercase>
-              Health Ed
+              Review Referrals
               <ArrowRight className={styles.right}/>
             </Button>
           }
