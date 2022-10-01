@@ -6,7 +6,7 @@ import Screening from './visit/1_Screening';
 import SocialNeeds from './visit/2_SocialNeeds';
 import SelectReferrals from './visit/3_SelectReferrals';
 import HealthEd from './visit/4_HealthEd';
-import Referrals from './visit/5_Referrals';
+import Referrals from './visit/4_Referrals';
 
 import template from "../data/AVS_template.json";
 
@@ -97,13 +97,13 @@ export default function Welcome() {
       setPcpSite("Gardner");
     }
     if (county=="San Mateo County, CA") {
-      description += template[0].SamaritanHouse.description;
-      map = template[0].SamaritanHouse.map;
+      description += template[0]["Samaritan House"].description;
+      map = template[0]["Samaritan House"].map;
       setPcpSite("Samaritan House");
     }
     if (county=="Alameda County, CA") {
-      description += template[0].AHS.description;
-      map = template[0].AHS.map;
+      description += template[0]["Alameda Health Systems"].description;
+      map = template[0]["Alameda Health Systems"].map;
       setPcpSite("Alameda Health Systems");
     }
     const newAVS = avs;
@@ -182,7 +182,7 @@ export default function Welcome() {
     if (pcp) {
       getPCP();
     }
-  }, [county, pcp]);
+  }, [county, language, pcp]);
 
   useEffect(() => {
     let newAVS = avs;

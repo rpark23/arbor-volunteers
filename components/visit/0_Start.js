@@ -57,7 +57,7 @@ export default function Start(props) {
         <div className={styles.step}>
           <div>
             <h3 style={{ backgroundColor: '#7a6ed1' }}>3</h3>
-            <p>Log vitals in EMR:</p>
+            <p>Log vitals and HAQ in EMR:</p>
           </div>
           <Link href="https://citrix.stanfordhealthcare.org" passHref>
             <Button component="a" target="_blank" rel="noreferrer" className={styles.tertiaryButton} rightIcon={<ExternalLink />} uppercase> Go to EMR</Button>

@@ -12,7 +12,7 @@ import dynamic from 'next/dynamic';
 import 'react-quill/dist/quill.snow.css';
 
 export default function Forms(props) {
-  const { note, prevScreen, nextScreen } = props;
+  const { note, form, pcpSite, prevScreen, nextScreen } = props;
 
   const [value, setValue] = useState(note);
 
@@ -68,9 +68,12 @@ export default function Forms(props) {
     <div className={styles.visitView}>
       <div className={styles.forms}>
         <h2 className={styles.sectionHeader}>Forms & EMR Note</h2>
-        <Link href="/forms/Arbor_Ravenswood_Cover_Sheet.pdf" passHref>
-          <Button component="a" download="Arbor_Ravenswood_Cover_Sheet.pdf" target="_blank" rel="noreferrer" className={styles.secondaryButton} rightIcon={<ExternalLink />}>Ravenswood Cover Sheet</Button>
-        </Link>
+        { form ?
+          <Link href={form} passHref>
+            <Button component="a" download={form.slice(7)} target="_blank" rel="noreferrer" className={styles.secondaryButton} rightIcon={<ExternalLink />}>{pcpSite} Cover Sheet</Button>
+          </Link> : "No referral forms needed!"
+        }
+        
         <QuillNoSSRWrapper className={styles.quillNote} modules={modules} formats={formats} theme="snow" value={value} id="quill"/>
         {/* <p leftIcon={<MoodHappy/>}>Congratulations on finishing your patient visit!</Text> */}
         <div className={styles.progress}>

@@ -26,6 +26,7 @@ export default function Referrals(props) {
   // const [ pcpSite, setPcpSite ] = useState('');
   const [ imagingTypes, setImagingTypes ] = useState([]);
   const [ note, setNote ] = useState('');
+  const [ form, setForm ] = useState('');
 
   //const [ pcpProps, setPcpProps ] = useState(null);
   const [ labsProps, setLabsProps ] = useState(null);
@@ -43,6 +44,11 @@ export default function Referrals(props) {
     <p><strong>Medication</strong>: ${medications ? "Yes" : "None"}</p>
     <p><strong>Other</strong>: </p>
     `);
+  }
+
+  const referralsForm = () => {
+    setForm(template[0][pcpSite].form);
+    console.log(template[0][pcpSite].form);
   }
 
   const getScreens = async () => {
@@ -67,6 +73,7 @@ export default function Referrals(props) {
     }
     setScreens(newScreens);
     emrNote();
+    referralsForm();
     console.log(newScreens);
     return newScreens;
   }
@@ -74,6 +81,10 @@ export default function Referrals(props) {
   useEffect(() => {
     getScreens();
   }, []);
+
+  useEffect(() => {
+    referralsForm();
+  }, [pcpSite]);
 
   const prevScreen = () => {
     if (screen == 0) {
@@ -109,7 +120,7 @@ export default function Referrals(props) {
           { screens[screen] == 2 ? <Imaging allProps={allProps} prevScreen={prevScreen} nextScreen={nextScreen} /> : null }
           { screens[screen] == 3 ? <Medications allProps={allProps} medProps={medProps}/> : null }
           { screen == 4 ? <AVS avs={avs} prevScreen={prevScreen} nextScreen={nextScreen} /> : null }
-          { screen == 5 ? <Forms note={note} prevScreen={prevScreen} nextScreen={nextScreen} /> : null }
+          { screen == 5 ? <Forms note={note} form={form} pcpSite={pcpSite} prevScreen={prevScreen} nextScreen={nextScreen} /> : null }
         </> : null
       }
     </>
