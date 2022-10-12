@@ -1,0 +1,140 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.flowDiagram img {
+  max-height: 99vh;
+  max-width: 99vw;
+}
+
+.letterBackground {
+  align-items: center;
+  background-color: #B83A4B;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 5vh;
+}
+
+.letter {
+  margin-top: 5vh;
+  padding: 2rem;
+  width: 60vw;
+}
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 150vh) {
+  .letter {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .letter {
+    width: 95vw;
+  }
+}
+
+@media (max-width: 540px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.accordian {
+  margin-top: 0.5rem;
+}
+
+.letter .accordian p {
+  font-size: 0.88rem;
+  line-height: 1.12rem;
+}
+
+.letter .roles,
+.letter .training,
+.letter .required {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.88rem;
+  line-height: 1.12rem;
+  padding: 1rem;
+}
+
+.letter .roles .img {
+  margin-top: 2rem;
+  height: 20vw;
+  width: 32vw;
+  position: relative;
+}
+
+@media (max-width: 150vh) {
+  .letter .roles .img {
+    height: 30vw;
+    width: 48vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .letter .roles .img {
+    height: 45vw;
+    width: 72vw;
+  }
+}
+
+.letter .flow {
+  align-items: center;
+  display: flex;
+}
+
+/* .letter .flow img {
+  width: 95%;
+} */
+
+.letter .flow .img {
+  margin-top: 1rem;
+  position: relative;
+  height: 42vw;
+  width: 60vw;
+}
+
+@media (max-width: 150vh) {
+  .letter .flow .img {
+    height: 56vw;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 720px) {
+  .letter .flow .img {
+    height: 63vw;
+    width: 90vw;
+  }
+}
+
+.letter .flow .arrow {
+  cursor: pointer;
+}
+
+.letter .flow .grey {
+  color: #ddd;
+}
+
+.letter a {
+  color: #4F93C7;
+  cursor: pointer;
+}
+
+.letter a:hover {
+  color: #2c6b9b;
+}
+
+.training a {
+  color: #B83A4B;
+}

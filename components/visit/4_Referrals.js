@@ -4,7 +4,7 @@ import styles from '../../styles/Tool.module.css';
 import PCP from '../referrals/0_PCP';
 import Labs from '../referrals/1_Labs';
 import Imaging from '../referrals/2_Imaging';
-import Medications from '../referrals/3_Medications';
+import Medications from '../referrals/3_Medications_old';
 import AVS from '../referrals/4_AVS';
 import Forms from '../referrals/5_Forms';
 
