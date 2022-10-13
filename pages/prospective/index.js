@@ -106,7 +106,7 @@ export default function Prospective() {
           <br/>
           <h3>Arbor Clinic Flow</h3>
           <br/>
-          <p>&emsp; Click on the arrows to walk through our new clinic flow or <a onClick={(e) => endFlow(e)}>jump to the end</a>.</p>
+          <p>&emsp; Click on the arrows to walk through our clinic flow or <a onClick={(e) => endFlow(e)}>jump to the end</a>.</p>
           <div className={styles.flow}>
             {flow == 1 ? <ChevronLeft className={styles.grey}/> : <ChevronLeft className={styles.arrow} onClick={(e) => prevFlow(e)} />}
             <div className={styles.img}>
