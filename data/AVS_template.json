@@ -30,7 +30,7 @@
   },
   {
     "title": "<h2>Labs Instructions</h2>",
-    "description": "<p>Your doctor has ordered several free laboratory tests for you. These tests are important for your doctor to understand your current health and to inform how they can best serve your needs. <br><br> Your test results will be returned to Arbor Free Clinic, and <strong>we will contact you regarding your results</strong> the Sunday after we receive them. If you do not hear from us within 3 weeks of having your tests completed, please email us at arborclinic@stanford.edu or leave a voice message at (650) 724-1332.</p>",
+    "description": "<p>Your doctor has ordered several free laboratory tests for you. These tests are important for your doctor to understand your current health and to inform how they can best serve your needs. <br><br> Your test results will be returned to Arbor Free Clinic, and <strong>we will call you to go over your results</strong> 1-2 Sundays after we receive results, as capacity allows.</p>",
     "location": {
       "boswell": {
         "description": "<h3>Stanford Hospital - Boswell Clinic Laboratory</h3><ul><li><strong>Address</strong>: 300 Pasteur Drive, Pavilion A, Level 1, A12 Stanford, CA 94305</li><li><strong>Hours</strong>: Mon-Fri 6:00am-5:30pm, Sat-Sun 7am-3:30pm</li><li><strong>Phone</strong>: (650) 724-4750</li></ul>"
@@ -45,7 +45,7 @@
   {
     "title": "<h2>Imaging Instructions</h2>",
     "type": "<p>Your doctor has ordered the following imaging for you to have done at Stanford Hospital: <ul><li>",
-    "description": "Your test results will be returned to Arbor Free Clinic, and <strong>we will contact you regarding your results</strong> the Sunday after we receive them. If you do not hear from us within 3 weeks of having your tests completed, please email us at arborclinic@stanford.edu or leave a voice message at (650) 724-1332.",
+    "description": "Your test results will be returned to Arbor Free Clinic, and <strong>we will call you to go over your results</strong> 1-2 Sundays after we receive results, as capacity allows.",
     "location": {
       "radiology": "<h3>Stanford Hospital – Radiology Registration</h3><ul><li><strong>Address</strong>: 300 Pasteur Drive, Pavilion E, Level 1, E12, Stanford, CA 94305</li><li><strong>Hours</strong>: Mon-Fri 6:45AM-5:00PM</li><li><strong>Directions</strong>: Please enter through the main hospital entrance near the fountain. Immediately after entering, take a left and proceed past the cafeteria. Turn to the left when you see the “Radiology Registration” sign (E12).</li>"
     },

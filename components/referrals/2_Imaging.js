@@ -28,7 +28,7 @@ export default function Labs(props) {
     if (us) {
       imagingTypes.push('ultrasound');
     }
-    instructions += imagingTypes.join(', ') + '</li></ul><br><h3>Imaging Instructions:</h3><ul>'
+    instructions += imagingTypes.join(', ') + '</li></ul><br>' + template[2].description + '<br><br><h3>Imaging Instructions:</h3><ul>'
     if (xray) {
       instructions += template[2].instructions.xray
     }
