@@ -77,10 +77,16 @@ export default function Welcome() {
     setOpen(false);
   };
 
+  useEffect(() => {
+    let newAVS = avs;
+    newAVS[0] = '<h1>After Visit Summary of Referrals</h1>'
+    setAVS(newAVS);
+  }, []);
+
   const getPCP = () => {
     let description = template[0].description + '<br>';
     let map;
-    if (county=="Santa Clara County, CA" && language=="English") {
+    if (county=="Santa Clara County, CA" && (language=="English" || language=="Other")) {
       description += template[0].Ravenswood.description;
       map = template[0].Ravenswood.map;
       setPcpSite("Ravenswood");
@@ -107,6 +113,7 @@ export default function Welcome() {
       setPcpSite("Alameda Health Systems");
     }
     const newAVS = avs;
+    newAVS[1] = '<br>' + template[0].title + description;
     newAVS[1] = '<br>' + template[0].title + description;
     setPcpProps({ map, description });
     setAVS(newAVS);
@@ -167,12 +174,6 @@ export default function Welcome() {
     //setMedicationProps({ description, prevScreen, nextScreen });
     setAVS(newAVS);
   }
-
-  useEffect(() => {
-    let newAVS = avs;
-    newAVS[0] = '<h1>After Visit Summary of Referrals</h1>'
-    setAVS(newAVS);
-  }, []);
 
   useEffect(() => {
     let newAVS = avs;
