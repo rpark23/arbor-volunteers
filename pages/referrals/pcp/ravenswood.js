@@ -17,7 +17,7 @@ export default function Ravenswood(props) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Patient Navigator</title>
+        <title>Ravenswood</title>
         <meta name="description" content="Patient Navigator Tool for Arbor Volunteers" />
         <link rel="icon" href="/images/logo.png" />
       </Head>

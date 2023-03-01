@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.cardinal {
+  color: #8C1515;
+}
+
 .navBar {
   align-items: center;
   display: flex;
@@ -95,10 +99,47 @@
   width: 30rem;
 }
 
-.referralsView .description {
+.referralsView .pcp .description {
   margin-left: 3rem;
 }
 
 .referralsView ul {
   margin-left: 2rem;
+}
+
+.referralsView .labs {
+  width: 80rem;
+}
+
+.referralsView .labs .description {
+  margin-right: 2rem;
+  margin-top: -0.5rem;
+}
+
+.referralsView .imaging .description {
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  width: 40rem;
+}
+
+.referralsView .labs .right,
+.referralsView .imaging .right {
+  width: 30rem;
+}
+
+.referralsView .labs .map,
+.referralsView .imaging .map {
+  height: 14.1375rem;
+  width: 30rem;
+  position: relative;
+}
+
+.referralsView .labs .right .location,
+.referralsView .imaging .right .location {
+  margin: 0.5rem 1rem 0;
+}
+
+.referralsView .labs .map img,
+.referralsView .imaging .map img {
+  border-radius: 5px;
 }
