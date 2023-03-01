@@ -1,0 +1,104 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  align-items: center;
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  width: 100vw;
+}
+
+.navBar .logoContainer {
+  width: 23rem;
+}
+
+.navBar .logoContainer:hover {
+  cursor: pointer;
+}
+
+.navBar .logoContainer .logo {
+  height: 3rem;
+  pointer-events: none;
+}
+
+.linksContainer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+}
+
+.linksContainer .link {
+  color: #8C1515;
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-decoration: none;
+
+  padding: 0.5rem;
+  text-align: center;
+  width: 9rem; 
+}
+
+.linksContainer .link:hover {
+  background-color: rgba(140, 21, 21, 0.1);
+  cursor: pointer;
+}
+
+.emailContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 13rem;
+}
+
+.emailContainer .email {
+  align-items: center;
+  border: solid 1px #8C1515;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem 0.5rem;
+}
+
+.emailContainer p {
+  color: #8C1515;
+  font-weight: 300;
+}
+
+.referralsView {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 80rem; */
+}
+
+.referralsView h2 {
+  color: #8C1515;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.referralsView > div {
+  display: flex;
+  margin-top: 1.5rem;
+  width: 75rem;
+}
+
+.referralsView .map iframe {
+  border-style: none;
+  border-radius: 10px;
+  height: 30rem;
+  width: 30rem;
+}
+
+.referralsView .description {
+  margin-left: 3rem;
+}
+
+.referralsView ul {
+  margin-left: 2rem;
+}
