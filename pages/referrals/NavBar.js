@@ -32,9 +32,9 @@ export default function NavBar() {
           </div>
         </Link>
         <div className={styles.emailContainer}>
-          <div className={styles.email}>
+          {/* <div className={styles.email}>
             <p>rpark23@stanford.edu</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
