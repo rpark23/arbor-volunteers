@@ -16,21 +16,20 @@ export default function Imaging(props) {
   const [otherTypes, setOtherTypes] = useState(null);
 
   useEffect(() => {
-    console.log(xray, ct, mri, us);
     let imagingTypes = [];
     let otherTypes = [];
-    if (xray) {
+    if (xray == "true") {
       imagingTypes.push('X-ray');
     } 
-    if (ct) {
+    if (ct == "true") {
       imagingTypes.push('CT');
       otherTypes.push('CT');
     }
-    if (mri) {
+    if (mri == "true") {
       imagingTypes.push('MRI');
       otherTypes.push('MRI');
     }
-    if (us) {
+    if (us == "true") {
       imagingTypes.push('Ultrasound');
       otherTypes.push('Ultrasound');
     }
