@@ -7,13 +7,13 @@ import NavBar from '../NavBar';
 import styles from '../../../styles/Referrals.module.css';
 import template from "../../../data/AVS_template.json";
 
-export default function Ravenswood(props) {
-  const map = template[0].Ravenswood.map;
+export default function NEMS(props) {
+  const map = template[0]['NEMS'].map;
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Ravenswood</title>
+        <title>NEMS</title>
         <meta name="description" content="Patient Navigator Tool for Arbor Volunteers" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
@@ -34,15 +34,23 @@ export default function Ravenswood(props) {
             </p>
             <br/>
             <p>
-              Therefore, we are referring you to <strong><u>Ravenswood &#x28;Mayview&#x29; Family Health Center</u></strong>. 
-              Ravenswood also offers dental care, optometry, insurance counseling, and other services. For uninsured 
-              patients, they operate on a sliding scale.
+              For affordable primary care, we are referring you to <strong><u>North East Medical Services (NEMS)</u></strong>. 
+              They can help with immunizations, referrals, and finding resources. They provide a sliding fee scale 
+              structure for medical care to be affordable and accessible to all. &#40;When enrolled, patients pay between 
+              $5 to $40 per visit. NEMS also helps enroll patients into health insurance programs, if they are uninsured.&#41; 
+              You can find more information in the attached handout. We will fax your referral in the next couple of days.
             </p>
             <br/>
             <h3>Next Steps</h3>
             <ul>
-              <li>Be on the lookout for a call from Ravenswood, but if you don&#x27;t receive it within a week, call &#x28;650&#x29; 330-7416.</li>
-              <li>We will follow up with you in 2 weeks to see if you have made contact with Ravenswood.</li>
+              <li>
+                Call &#40;408&#41;-573-9686 &#40;ext. 8160&#41; within the next week to register in their network. For more 
+                information on how to register, see <a href='https://nems.org/' rel='noopener noreferrer' target='_blank'>this website</a>.
+              </li>
+              <li>
+                We will follow up with you in 2 weeks to see if you were able to successfully register, and fax our 
+                records soon after confirmation.
+              </li>
             </ul>
           </div>
         </div>

@@ -7,13 +7,13 @@ import NavBar from '../NavBar';
 import styles from '../../../styles/Referrals.module.css';
 import template from "../../../data/AVS_template.json";
 
-export default function Ravenswood(props) {
-  const map = template[0].Ravenswood.map;
+export default function AHS(props) {
+  const map = template[0]['Alameda Health Systems'].map;
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Ravenswood</title>
+        <title>Alameda Health System</title>
         <meta name="description" content="Patient Navigator Tool for Arbor Volunteers" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
@@ -34,15 +34,20 @@ export default function Ravenswood(props) {
             </p>
             <br/>
             <p>
-              Therefore, we are referring you to <strong><u>Ravenswood &#x28;Mayview&#x29; Family Health Center</u></strong>. 
-              Ravenswood also offers dental care, optometry, insurance counseling, and other services. For uninsured 
-              patients, they operate on a sliding scale.
+              You can get a Primary Care Physician &#40;PCP&#41; within the <strong><u>Alameda Health System</u></strong> if you 
+              &#40;1&#41; reside in Alameda County, &#40;2&#41; are uninsured, and &#40;3&#41; have not been seen at Alameda Health System.
             </p>
             <br/>
             <h3>Next Steps</h3>
             <ul>
-              <li>Be on the lookout for a call from Ravenswood, but if you don&#x27;t receive it within a week, call &#x28;650&#x29; 330-7416.</li>
-              <li>We will follow up with you in 2 weeks to see if you have made contact with Ravenswood.</li>
+              <li>
+                Call &#40;510&#41; 437-8500 and listen through the options to schedule a financial appointment for 
+                PCP and any specialty clinics you may need in the future.
+              </li>
+              <li>
+                Once you connect with the doctors, let us know if they need any medical records from us and we can 
+                facilitate that process.
+              </li>
             </ul>
           </div>
         </div>

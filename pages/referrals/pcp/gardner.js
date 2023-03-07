@@ -7,13 +7,13 @@ import NavBar from '../NavBar';
 import styles from '../../../styles/Referrals.module.css';
 import template from "../../../data/AVS_template.json";
 
-export default function Ravenswood(props) {
-  const map = template[0].Ravenswood.map;
+export default function Gardner(props) {
+  const map = template[0]['Gardner'].map;
 
   return (
     <div className={styles.container}>
       <Head>
-        <title>Ravenswood</title>
+        <title>Gardner</title>
         <meta name="description" content="Patient Navigator Tool for Arbor Volunteers" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
@@ -34,15 +34,19 @@ export default function Ravenswood(props) {
             </p>
             <br/>
             <p>
-              Therefore, we are referring you to <strong><u>Ravenswood &#x28;Mayview&#x29; Family Health Center</u></strong>. 
-              Ravenswood also offers dental care, optometry, insurance counseling, and other services. For uninsured 
-              patients, they operate on a sliding scale.
+              For affordable primary care, we are referring you to <strong><u>Gardner Health Center</u></strong>. 
+              Gardner also offers mental health treatment, dental care, optometry, insurance counseling, and other 
+              services.
             </p>
             <br/>
             <h3>Next Steps</h3>
             <ul>
-              <li>Be on the lookout for a call from Ravenswood, but if you don&#x27;t receive it within a week, call &#x28;650&#x29; 330-7416.</li>
-              <li>We will follow up with you in 2 weeks to see if you have made contact with Ravenswood.</li>
+              <li>Call &#40;408&#41; 457-7100 to schedule your first appointment at Gardner Health Center.</li>
+              <li>
+                We will follow up with you in 2 weeks to see if you have made contact with Gardner, and we will securely 
+                fax them your medical records <strong>once you register in Gardner&#39;s network</strong> to complete the referral 
+                process.
+              </li>
             </ul>
           </div>
         </div>
